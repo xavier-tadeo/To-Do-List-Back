@@ -17,6 +17,6 @@ const todoSchema = new Schema({
   },
 });
 
-const Tuit = model("todo", todoSchema);
+const Todo = model("todo", todoSchema);
 
-module.exports = Tuit;
+module.exports = Todo;
