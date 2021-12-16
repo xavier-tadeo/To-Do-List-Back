@@ -1,0 +1,22 @@
+{
+  "name": "to-do-list-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll --collect-coverage",
+    "start": "node index",
+    "dev": "nodemon index -q"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.4.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.3.0"
+  }
+}
