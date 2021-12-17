@@ -1,9 +1,10 @@
 const express = require("express");
 
-const { getTodo } = require("../controller/todoController");
+const { getTodo, createTodoList } = require("../controller/todoController");
 
 const router = express.Router();
 
 router.get("/", getTodo);
+router.post("/create", createTodoList);
 
 module.exports = router;

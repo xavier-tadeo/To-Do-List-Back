@@ -14,6 +14,6 @@ const todoSchema = new Schema({
   },
 });
 
-const Todo = model("todo", todoSchema);
+const Todo = model("todo", todoSchema, "todos");
 
 module.exports = Todo;
