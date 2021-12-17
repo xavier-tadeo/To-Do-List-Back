@@ -4,6 +4,8 @@ const debug = require("debug")("todo:server");
 
 const morgan = require("morgan");
 
+const routesTodo = require("./routes/routesTodo");
+
 const app = express();
 
 const initializeServer = (port) =>
@@ -24,5 +26,7 @@ const initializeServer = (port) =>
 app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
+
+app.use("/todo", routesTodo);
 
 module.exports = { initializeServer, app };
