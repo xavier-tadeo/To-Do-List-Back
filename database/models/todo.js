@@ -7,10 +7,7 @@ const todoSchema = new Schema({
     minlength: 1,
     maxlength: 200,
   },
-  likes: {
-    type: Number,
-    default: 0,
-  },
+
   date: {
     type: Date,
     default: Date.now,
