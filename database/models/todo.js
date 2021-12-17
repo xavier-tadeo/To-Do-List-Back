@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 
 const todoSchema = new Schema({
-  text: {
+  task: {
     type: String,
     required: true,
     minlength: 1,
