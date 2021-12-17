@@ -11,4 +11,15 @@ const getTodo = async (req, res, next) => {
   }
 };
 
-module.exports = { getTodo };
+const createTodoList = async (req, res, next) => {
+  try {
+    const newTodo = await Todo.create(req.body);
+    res.json(newTodo);
+  } catch {
+    const error = new Error("Something error todo!!!");
+    error.code = 400;
+    next(error);
+  }
+};
+
+module.exports = { getTodo, createTodoList };
