@@ -20,4 +20,17 @@ const createTodoList = async (req, res, next) => {
   }
 };
 
-module.exports = { getTodo, createTodoList };
+const deleteTodoList = async (req, res, next) => {
+  console.log(req.params);
+  const { id } = req.params;
+  console.log(id);
+  try {
+    const delteTodo = await Todo.findByIdAndDelete(id);
+    res.json({ id: delteTodo.id });
+  } catch {
+    const error = new Error("Something error todo!!!");
+    error.code = 400;
+    next(error);
+  }
+};
+module.exports = { getTodo, createTodoList, deleteTodoList };
